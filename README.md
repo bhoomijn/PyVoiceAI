@@ -44,12 +44,12 @@ Text-to-Speech
 
 ## Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| **Python** | Core application logic |
-| **SpeechRecognition** | Speech-to-text processing |
-| **pyttsx3** | Text-to-speech synthesis |
-| **PyAudio** | Microphone and audio input |
+| Technology            | Purpose                    |
+| --------------------- | -------------------------- |
+| **Python**            | Core application logic     |
+| **SpeechRecognition** | Speech-to-text processing  |
+| **pyttsx3**           | Text-to-speech synthesis   |
+| **PyAudio**           | Microphone and audio input |
 
 ---
 
