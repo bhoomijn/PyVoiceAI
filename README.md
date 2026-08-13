@@ -2,17 +2,17 @@
 
 ### Intelligent Voice Interaction with Python
 
-PyVoiceAI is a lightweight voice assistant built with Python that combines **speech recognition** and **text-to-speech** to create a simple, hands-free human–computer interaction experience.
+PyVoiceAI is a lightweight Python voice assistant that combines **speech recognition** and **text-to-speech** to create a simple, hands-free human–computer interaction experience.
 
-Designed with a clean and minimal architecture, the project focuses on making voice interaction easy to understand, extend, and run locally.
+Built with a minimal and modular approach, the project provides a clean foundation for developing voice-enabled Python applications.
 
 ---
 
 ## Overview
 
-PyVoiceAI listens to spoken commands through the microphone, processes the recognized speech, and responds using synthesized voice.
+PyVoiceAI captures audio through a microphone, converts spoken input into text, processes the command, and responds through synthesized speech.
 
-The project demonstrates the core building blocks behind voice-enabled applications while keeping the implementation lightweight and beginner-friendly.
+### Voice Pipeline
 
 ```text
 Microphone
@@ -24,7 +24,7 @@ Speech Recognition
 Command Processing
     │
     ▼
-Voice Response
+Response Generation
     │
     ▼
 Text-to-Speech
@@ -32,24 +32,24 @@ Text-to-Speech
 
 ---
 
-## Key Capabilities
+## Features
 
 * **Speech Recognition** — Converts spoken input into text.
-* **Voice Response** — Converts generated responses into natural speech.
-* **Real-Time Interaction** — Enables continuous microphone-based interaction.
-* **Lightweight Architecture** — Uses a small set of focused Python libraries.
-* **Extensible Design** — Provides a foundation for adding commands and intelligent features.
+* **Text-to-Speech** — Produces spoken responses using `pyttsx3`.
+* **Real-Time Interaction** — Supports microphone-based voice interaction.
+* **Lightweight Architecture** — Built with a focused set of Python libraries.
+* **Extensible Foundation** — Designed to support additional commands and features.
 
 ---
 
 ## Technology Stack
 
-| Technology            | Role                                 |
-| --------------------- | ------------------------------------ |
-| **Python**            | Core application logic               |
-| **SpeechRecognition** | Speech-to-text processing            |
-| **pyttsx3**           | Text-to-speech synthesis             |
-| **PyAudio**           | Microphone and audio stream handling |
+| Technology            | Purpose                    |
+| --------------------- | -------------------------- |
+| **Python**            | Core application logic     |
+| **SpeechRecognition** | Speech-to-text processing  |
+| **pyttsx3**           | Text-to-speech synthesis   |
+| **PyAudio**           | Microphone and audio input |
 
 ---
 
@@ -59,7 +59,7 @@ Text-to-Speech
 PyVoiceAI/
 │
 ├── main.py              # Application entry point
-├── requirements.txt     # Python dependencies
+├── requirements.txt     # Project dependencies
 ├── README.md            # Project documentation
 ├── .gitignore           # Git exclusions
 └── LICENSE              # Project license
@@ -71,52 +71,53 @@ PyVoiceAI/
 
 ### Prerequisites
 
-Make sure you have:
+Before running PyVoiceAI, make sure you have:
 
 * Python 3.x
 * A working microphone
-* Internet access where required by the configured speech-recognition service
+* Required audio permissions
+* Internet access if required by the configured speech-recognition service
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/bhoomijn/PyVoiceAI.git
 cd PyVoiceAI
 ```
 
-### 2. Create a virtual environment
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-### 3. Activate the environment
+### 3. Activate the Environment
 
-**Windows**
+**Windows:**
 
 ```bash
 .venv\Scripts\activate
 ```
 
-### 4. Install dependencies
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Launch PyVoiceAI
+### 5. Run the Assistant
 
 ```bash
 python main.py
 ```
 
-Allow microphone access when prompted and start interacting with the assistant.
+Allow microphone access when prompted and start interacting with PyVoiceAI.
 
 ---
 
-## Requirements
+## Dependencies
 
-Dependencies are maintained in [`requirements.txt`](requirements.txt).
+The project dependencies are maintained in [`requirements.txt`](requirements.txt).
 
 ```text
 SpeechRecognition
@@ -128,42 +129,45 @@ PyAudio
 
 ## How It Works
 
-PyVoiceAI follows a simple voice-processing pipeline:
+### 01 — Listen
 
-**1. Listen**
-The application captures audio through the system microphone.
+PyVoiceAI captures audio input through the system microphone.
 
-**2. Recognize**
-Speech recognition converts the captured audio into text.
+### 02 — Recognize
 
-**3. Process**
-The recognized command is handled by the Python application.
+The speech-recognition layer converts the captured audio into text.
 
-**4. Respond**
-The assistant generates a response.
+### 03 — Process
 
-**5. Speak**
+The Python application processes the recognized input.
+
+### 04 — Respond
+
+The assistant prepares an appropriate response.
+
+### 05 — Speak
+
 `pyttsx3` converts the response into audible speech.
 
 ---
 
 ## Future Scope
 
-The project can be extended with:
+The architecture can be extended with:
 
 * Custom voice commands
-* Web search capabilities
-* Application and system automation
-* Weather and news integrations
-* AI-powered conversational responses
-* Modular command handling
-* Personalized assistant settings
+* Web search integration
+* System and application automation
+* Weather and news services
+* AI-powered conversational capabilities
+* Modular command handlers
+* Personalized assistant preferences
 
 ---
 
-## Project Goals
+## Project Objective
 
-PyVoiceAI was created to explore practical concepts in:
+PyVoiceAI was developed to explore practical concepts in:
 
 * Voice-based interfaces
 * Speech recognition
@@ -171,7 +175,7 @@ PyVoiceAI was created to explore practical concepts in:
 * Python automation
 * Human–computer interaction
 
-The architecture is intentionally simple so that new capabilities can be added without making the core project unnecessarily complex.
+The project focuses on keeping the core implementation simple while providing a foundation for future voice-assistant capabilities.
 
 ---
 
@@ -179,7 +183,7 @@ The architecture is intentionally simple so that new capabilities can be added w
 
 **Bhoomi Jain**
 
-GitHub: [@bhoomijn](https://github.com/bhoomijn)
+[GitHub Profile](https://github.com/bhoomijn)
 
 ---
 
@@ -190,5 +194,5 @@ This project is licensed under the **MIT License**.
 ---
 
 <p align="center">
-  Built with Python • Speech Recognition • Voice Technology
+  Built with Python • Speech Recognition • Text-to-Speech
 </p>
